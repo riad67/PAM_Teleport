@@ -1,0 +1,135 @@
+1
+00:00:00,000 --> 00:00:04,786
+Start in the PAM project folder. Run docker ps to list the running containers.
+
+2
+00:00:04,786 --> 00:00:09,571
+The Teleport container is running. Reset the existing admin account with tctl.
+
+3
+00:00:09,571 --> 00:00:14,643
+Copy the one-time reset link and open it in the local browser.
+
+4
+00:00:14,643 --> 00:00:17,143
+Select Continue to begin account recovery.
+
+5
+00:00:17,143 --> 00:00:25,143
+Set and confirm a new password for the Teleport user admin.
+
+6
+00:00:25,143 --> 00:00:29,000
+Register the authenticator and enter its verification code.
+
+7
+00:00:29,000 --> 00:00:32,571
+Open the cluster. The Resources page lists localhost as an SSH server.
+
+8
+00:00:32,571 --> 00:00:39,714
+The sidebar provides access to identity settings, resources, and audit tools.
+
+9
+00:00:39,714 --> 00:00:43,214
+On the localhost resource, open Connect and select the root login.
+
+10
+00:00:43,214 --> 00:00:46,714
+In the browser terminal, pwd shows the working directory: /root.
+
+11
+00:00:46,714 --> 00:00:52,857
+The echo command prints a test message inside the SSH session.
+
+12
+00:00:52,857 --> 00:01:01,286
+A relative path fails here. Use the absolute path /root to return to the home directory.
+
+13
+00:01:01,286 --> 00:01:07,500
+Return to the cluster and open Users to inspect local identities.
+
+14
+00:01:07,500 --> 00:01:12,857
+Select a user to inspect its assigned roles and traits.
+
+15
+00:01:12,857 --> 00:01:18,929
+The interface also offers integrations and access-request workflows.
+
+16
+00:01:18,929 --> 00:01:25,357
+Open the bot details to inspect the settings for a machine identity.
+
+17
+00:01:25,357 --> 00:01:31,786
+In Instance Inventory, localhost appears with its Teleport version and services.
+
+18
+00:01:31,786 --> 00:01:37,714
+Open Roles under Zero Trust Access to inspect the available policies.
+
+19
+00:01:37,714 --> 00:01:45,857
+The role editor displays the policy definition and available editing options.
+
+20
+00:01:45,857 --> 00:01:54,286
+Browse the cluster settings and open the integrations list.
+
+21
+00:01:54,286 --> 00:02:03,357
+Machine ID shows bots and their instances in a separate inventory.
+
+22
+00:02:03,357 --> 00:02:09,286
+Open the GitHub Actions integration to explore its Kubernetes setup guide.
+
+23
+00:02:09,286 --> 00:02:17,714
+The wizard asks for repository details and shows a sample workflow.
+
+24
+00:02:17,714 --> 00:02:22,857
+Open Audit, then Session Recordings, and select the recorded SSH session.
+
+25
+00:02:22,857 --> 00:02:30,357
+The player identifies admin and localhost. Its timeline replays the terminal activity.
+
+26
+00:02:30,357 --> 00:02:36,429
+Return to the session list, then open the resource enrollment catalog.
+
+27
+00:02:36,429 --> 00:02:41,286
+The web application guide offers agent setup commands with a temporary join token.
+
+28
+00:02:41,286 --> 00:02:45,929
+The Kubernetes guide shows the chart repository and cluster configuration fields.
+
+29
+00:02:45,929 --> 00:02:52,071
+The Debian guide offers SSH service labels. Leave the wizard to open Audit.
+
+30
+00:02:52,071 --> 00:02:57,643
+Select the join-token event to inspect its audit record.
+
+31
+00:02:57,643 --> 00:03:02,143
+The log also records session access, disconnects, and authentication changes.
+
+32
+00:03:02,143 --> 00:03:09,429
+Open Create User and enter a name for a local account.
+
+33
+00:03:09,429 --> 00:03:16,286
+The form provides role selection and optional user traits.
+
+34
+00:03:16,286 --> 00:03:18,619
+Return to the Users list.

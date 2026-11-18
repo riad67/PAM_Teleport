@@ -1,0 +1,20 @@
+services:
+  teleport:
+    build: .
+    image: pam-teleport-local:18.11.10
+    hostname: localhost
+    ports:
+      - "127.0.0.1:${PAM_WEB_PORT:-3080}:3080"
+    volumes:
+      - ./config/teleport.yaml:/etc/teleport/teleport.yaml:ro
+      - teleport-data:/var/lib/teleport
+    healthcheck:
+      test: ["CMD", "tctl", "status"]
+      interval: 10s
+      timeout: 5s
+      retries: 9
+      start_period: 10s
+    restart: unless-stopped
+
+volumes:
+  teleport-data:
